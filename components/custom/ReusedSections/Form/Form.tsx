@@ -81,11 +81,11 @@ export default function PropertyForm() {
               {isSubmitting ? 'Submitting...' : 'Request Evaluation'}
             </MyButton>
           </div>
-          {Object.keys(errors).length > 0 && (
+          {/* {Object.keys(errors).length > 0 && (
             <div className="text-red-500 mt-2">
               {JSON.stringify(errors, null, 2)}
             </div>
-          )}
+          )} */}
         </Form>
       )}
     </Formik>
