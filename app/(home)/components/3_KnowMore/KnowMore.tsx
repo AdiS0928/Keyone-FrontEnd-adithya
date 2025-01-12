@@ -4,24 +4,24 @@ import Image from "next/image";
 
 export default function KnowMore() {
   return (
-    <div className="relative flex flex-col w-full items-center justify-center min-h-[70vh] overflow-hidden bg-secondary-100">
+    <div  id="about" className="relative flex flex-col w-full items-center justify-center min-h-[70vh] overflow-hidden bg-secondary-100">
       <div className="flex flex-col md:flex-row items-center justify-center text-center h-full w-[95vw] max-w-[1400px]">
 
         {/* Left Section */}
-        <div className="flex items-center justify-center w-full md:w-1/2">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 relative">
             <Image
                 alt="Placeholder Image"
                 src="/images/home/image1.png"
                 width={350}
                 height={350}
-                className="object-contain"
+                className="object-contain w-[250px] md:w-[350px] h-auto"
             />
             <Image
                 alt="Placeholder Image"
                 src="/images/home/image2.png"
                 width={280}
                 height={280}
-                className="object-contain ml-[-100px] mt-[270px]"
+                className="object-contain w-[200px] md:w-[280px] h-auto md:ml-[-100px] md:mt-[270px] mt-[-50px]"
             />
         </div>
 

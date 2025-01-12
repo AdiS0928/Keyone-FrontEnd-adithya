@@ -6,24 +6,24 @@ export const items: MenuItemType[] = [
     url: '/',
   },
   {
-    label: 'Our Services',
-    url: '/our-services',
+    label: 'About',
+    url: '#about',
   },
   {
-    label: 'About Us',
-    url: '/about-us',
-  },
-  {
-    label: 'Contact',
-    url: '/contact',
+    label: 'Services',
+    url: '#services',
   },
   {
     label: 'Contact',
-    url: '/contact',
+    url: '#contact',
   },
   {
     label: 'Contact',
-    url: '/contact',
+    url: '#contact',
+  },
+  {
+    label: 'Contact',
+    url: '#contact',
   },
 ];
 

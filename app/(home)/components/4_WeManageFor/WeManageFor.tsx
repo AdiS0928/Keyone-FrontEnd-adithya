@@ -10,21 +10,21 @@ export default function WeManageFor() {
         <p>Find out how much you can maximize your income with Key One Holiday Homes</p>
 
         <div className="flex flex-col items-center justify-center text-center gap-4 mt-4">
-          <div className="flex items-center justify-center w-full gap-4">
-            <div className="relative w-[380px] h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
-              <Image alt="Placeholder Image" src="/images/home/image3.png" fill className="rounded-lg" />
+          <div className="flex flex-col md:flex-row items-center justify-center w-full gap-4">
+            <div className="relative w-[90vw] md:w-[380px] h-[180px] md:h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
+              <Image alt="Placeholder Image" src="/images/home/image3.png" fill className="rounded-lg object-cover" />
             </div>
-            <div className="relative w-[350px] h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
-              <Image alt="Placeholder Image" src="/images/home/image4.png" fill className="rounded-lg" />
+            <div className="relative w-[90vw] md:w-[350px] h-[180px] md:h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
+              <Image alt="Placeholder Image" src="/images/home/image4.png" fill className="rounded-lg object-cover" />
             </div>
           </div>
 
-          <div className="flex items-center justify-center w-full gap-4">
-            <div className="relative w-[350px] h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
-              <Image alt="Placeholder Image" src="/images/home/image5.png" fill className="rounded-lg" />
+          <div className="flex flex-col md:flex-row items-center justify-center w-full gap-4">
+            <div className="relative w-[90vw] md:w-[350px] h-[180px] md:h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
+              <Image alt="Placeholder Image" src="/images/home/image5.png" fill className="rounded-lg object-cover" />
             </div>
-            <div className="relative w-[380px] h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
-              <Image alt="Placeholder Image" src="/images/home/image6.png" fill className="rounded-lg" />
+            <div className="relative w-[90vw] md:w-[380px] h-[180px] md:h-[197.5px] transition-all transform duration-300 hover:scale-105 hover:shadow-xl">
+              <Image alt="Placeholder Image" src="/images/home/image6.png" fill className="rounded-lg object-cover" />
             </div>
           </div>
         </div>

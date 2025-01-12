@@ -30,7 +30,7 @@ const ToTop: React.FC = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 w-12 h-12 flex items-center justify-center bg-secondary-200 text-primary-500 rounded-lg shadow-lg transition-colors duration-200 hover:bg-[#fcd7d4] border-2 border-secondary-200 z-10" style={{ borderRadius: '5px' }}
+          className="fixed bottom-4 right-4 w-12 h-12 flex items-center justify-center bg-secondary-200 text-primary-500 rounded-lg shadow-lg transition-colors duration-200 hover:bg-gray-700 border-2 border-secondary-200 z-10"
           aria-label="Scroll to top"
         >
           <IoMdArrowUp className="text-xl" fill='white' />

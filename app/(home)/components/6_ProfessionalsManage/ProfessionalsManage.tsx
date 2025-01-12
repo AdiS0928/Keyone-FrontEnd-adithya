@@ -3,7 +3,7 @@ import { serviceData } from "./data";
 
 export default function ProfessionalsManage() {
   return (
-    <div className="relative flex flex-col w-full items-center justify-center min-h-[60vh] py-10 overflow-hidden bg-secondary-100">
+    <div  className="relative flex flex-col w-full items-center justify-center min-h-[60vh] py-10 overflow-hidden bg-secondary-100">
       <div className="flex flex-col items-center justify-center text-center h-full w-[95vw] max-w-[1400px]">
 
         <h1 className="text-black text-2xl md:text-4xl max-w-[550px] mb-4">Let The Professionals Manage Your Holiday Home</h1>

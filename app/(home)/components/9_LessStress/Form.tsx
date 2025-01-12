@@ -11,18 +11,55 @@ type FormValues = typeof initialValues;
 export default function FormSection() {
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(0);
+  const [step1Data, setStep1Data] = useState<Partial<FormValues>>({});
 
-  const handleNext = () => {
+  const handleNext = (values: FormValues) => {
     if (step === 1) {
+      setStep1Data({
+        location: values.location,
+        bedrooms: values.bedrooms,
+        type: values.type
+      });
       setStep(2);
       setProgress(50);
     }
   };
 
-  const handleSubmit = (values: FormValues) => {
+  const handleSubmit = async (values: FormValues, { resetForm }: { resetForm: () => void }) => {
     if (step === 2) {
-      console.log(values);
-      setProgress(100);
+      try {
+        const combinedData = {
+          ...step1Data,
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          formType: 'lessStress'
+        };
+
+        const response = await fetch('https://keyone-backend-5c4c7d5eeddb.herokuapp.com/api/leads', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(combinedData),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to submit form');
+        }
+
+        console.log('Form submitted successfully');
+        setProgress(100);
+        
+        // Reset everything
+        resetForm();
+        setStep1Data({});
+        setStep(1);
+        setProgress(0);
+        
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
     }
   };
 
@@ -51,7 +88,7 @@ export default function FormSection() {
                 <div className="flex justify-end mt-4">
                   <button
                     type="button"
-                    onClick={handleNext}
+                    onClick={() => handleNext(values)}
                     disabled={!isFirstStepFilled(values)}
                     className={`bg-green-600 text-white px-8 py-2 rounded-lg hover:bg-green-700 transition-all ${!isFirstStepFilled(values) ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
