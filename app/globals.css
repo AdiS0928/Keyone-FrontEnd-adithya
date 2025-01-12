@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter Variable', sans-serif;
+  overflow-x: hidden;
+  background: #F1F1F1;
+}
+
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("/theme/fonts/Poppins/Poppins-Light.ttf") format("opentype");
+}
+
+* {
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'PoppinsLight', sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.poppins {
+  font-family: 'PoppinsLight', sans-serif;
+}
+
+@keyframes handwriting {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+::selection {
+  background-color: #000;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #000;
+  color: white;
+}
+
+/* Scrollbar styling  */
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(63, 63, 63) #8b8b8b;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #8b8b8b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 63);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(90, 90, 90);
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */

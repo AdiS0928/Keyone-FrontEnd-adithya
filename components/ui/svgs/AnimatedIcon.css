@@ -1,0 +1,37 @@
+.animated-icon {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.animated-icon .line-path {
+  stroke-dashoffset: 0;
+  height: 3;
+  animation: drawIcon 1s ease forwards;
+}
+
+@keyframes drawIcon {
+  0% {
+    stroke-dashoffset: 64;
+    height: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    height: 3;
+  }
+}
+
+/* Trigger animation on hover */
+.my-button:hover .animated-icon .line-path {
+  animation: restartAnimation 1s ease forwards;
+}
+
+@keyframes restartAnimation {
+  0% {
+    stroke-dashoffset: 64;
+    height: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    height: 3;
+  }
+}
